@@ -1,0 +1,155 @@
+@import "https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  text-decoration: none;
+}
+:root {
+  --colors-1: hsl(300, 43%, 22%);
+  --colors-2: hsl(333, 80%, 67%);
+  --colors-3: hsl(303, 10%, 53%);
+  --colors-4: hsl(300, 24%, 96%);
+  --colors-5: hsl(0, 0%, 100%);
+  --colors-6: hsl(228, 45%, 44%);
+  --font-base: "League Spartan";
+}
+
+.container {
+  font-family: var(--font-base);
+  padding: 5em;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--colors-5);
+  position: relative;
+  height: 100vh;
+}
+
+.top,
+.bottom {
+  position: absolute;
+}
+
+.top {
+  top: 0;
+  left: 0;
+}
+
+.bottom {
+  bottom: 0;
+  right: 0;
+}
+
+.top-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+
+/* Top left */
+.top-left-container h1 {
+  color: var(--colors-1);
+  font-size: 5em;
+  justify-self: start;
+  margin-bottom: 30px;
+  line-height: 0.8;
+}
+
+.top-left-container p {
+  color: var(--colors-1);
+  font-size: 1.5em;
+  line-height: 1.2;
+}
+
+/* Top right */
+.top-right-container {
+  justify-self: end;
+  margin-top: 20px;
+}
+
+.top-right-container-rating {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  background-color: var(--colors-4);
+  padding: 1.2em 2em;
+  border-radius: 7px;
+  margin-top: 20px;
+}
+
+.top-right-container-rating img {
+  margin-left: 0.5em;
+}
+
+.top-right-container-rating-text p {
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.top-right-container-rating:nth-child(1) {
+  transform: translateX(-100px);
+}
+
+.top-right-container-rating:nth-child(2) {
+  transform: translateX(-50px);
+}
+
+.bottom-container {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+
+.bottom-container-cards {
+  background-color: var(--colors-1);
+  border-radius: 7px;
+  padding: 2.2em 1.5em;
+  color: var(--colors-5);
+}
+
+.bottom-container-cards:nth-child(2) {
+  transform: translateY(20px);
+}
+
+.bottom-container-cards:nth-child(3) {
+  transform: translateY(40px);
+}
+
+.bottom-container-card-person-info {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.bottom-container-card-person-image img {
+  border-radius: 100%;
+  width: 40px;
+}
+
+.bottom-container-card-person-name p:first-child {
+  font-weight: 700;
+}
+
+.bottom-container-card-person-name p:last-child {
+  margin-top: 5px;
+  color: var(--colors-2);
+}
+
+.bottom-container-card-person-review p {
+  line-height: 1.5;
+  font-size: 1.2em;
+}
+
+/* Other */
+.attribution {
+  text-align: center;
+  font-family: var(--font-base);
+  margin-top: 100px;
+}
+
+.attribution a {
+  color: var(--colors-6);
+}
